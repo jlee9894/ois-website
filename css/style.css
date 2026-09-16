@@ -761,6 +761,12 @@ h3 { font-size: 1.25rem; }
   height: 100%;
   object-fit: cover;
 }
+.catalog-cover-contain {
+  background: var(--white);
+}
+.catalog-cover-contain img {
+  object-fit: contain;
+}
 .catalog-body {
   padding: 26px;
   display: flex;
@@ -791,19 +797,6 @@ h3 { font-size: 1.25rem; }
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-}
-.catalog-cover-branded {
-  aspect-ratio: 3 / 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(155deg, var(--navy), var(--teal));
-  color: var(--white);
-}
-.catalog-placeholder-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Contact page */
