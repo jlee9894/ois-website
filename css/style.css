@@ -204,17 +204,13 @@ h3 { font-size: 1.25rem; }
 .brand-logo {
   width: 56px;
   height: 56px;
-  border-radius: 50%;
-  background: var(--navy);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  font-size: 1.1rem;
-  letter-spacing: 0.03em;
-  border: 3px solid var(--red);
+  object-fit: contain;
   flex-shrink: 0;
+}
+.footer-brand .brand-logo {
+  background: var(--white);
+  border-radius: 50%;
+  padding: 4px;
 }
 .brand-text .brand-name {
   font-weight: 800;
