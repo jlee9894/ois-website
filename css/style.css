@@ -792,13 +792,13 @@ h3 { font-size: 1.25rem; }
   gap: 12px;
   flex-wrap: wrap;
 }
-.catalog-card.coming-soon .catalog-cover {
+.catalog-cover-branded {
   aspect-ratio: 3 / 4;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--gray-50);
-  color: var(--gray-300);
+  background: linear-gradient(155deg, var(--navy), var(--teal));
+  color: var(--white);
 }
 .catalog-placeholder-icon {
   display: flex;
