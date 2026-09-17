@@ -3,14 +3,15 @@
    ========================================================================== */
 
 :root {
-  /* Palette sampled directly from the OIS logo: red lettering, black
-     starburst, sky-blue ocean, sage-green landmass. */
+  /* Warm palette led by the logo's red, with gold as the secondary
+     accent in place of blue; green is reserved for the minority-owned
+     business messaging, sampled from the logo's landmass color. */
   --red: #e8333e;
   --red-dark: #c2242e;
   --ink: #1a1a1a;
   --ink-light: #262626;
-  --blue: #1f9acc;
-  --blue-light: #5fc2ea;
+  --gold: #e3a83b;
+  --gold-dark: #b8841f;
   --green: #2f7a53;
   --green-light: #97c6a6;
   --gray-50: #f6f7f9;
@@ -282,7 +283,7 @@ h3 { font-size: 1.25rem; }
 /* Hero */
 .hero {
   position: relative;
-  background: linear-gradient(120deg, var(--ink) 0%, #163b4d 55%, var(--blue) 130%);
+  background: linear-gradient(120deg, var(--ink) 0%, #3d1216 55%, var(--red-dark) 130%);
   color: var(--white);
   overflow: hidden;
 }
@@ -290,8 +291,8 @@ h3 { font-size: 1.25rem; }
   content: "";
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle at 15% 20%, rgba(232, 51, 62, 0.25), transparent 40%),
-    radial-gradient(circle at 85% 80%, rgba(31, 154, 204, 0.35), transparent 45%);
+  background-image: radial-gradient(circle at 15% 20%, rgba(227, 168, 59, 0.3), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(232, 51, 62, 0.4), transparent 45%);
   pointer-events: none;
 }
 .hero-grid {
@@ -336,7 +337,7 @@ h3 { font-size: 1.25rem; }
 }
 .hero-badge svg {
   flex-shrink: 0;
-  color: var(--blue-light);
+  color: var(--gold);
 }
 
 /* Quote form card */
@@ -379,7 +380,7 @@ h3 { font-size: 1.25rem; }
 .form-row input:focus,
 .form-row select:focus,
 .form-row textarea:focus {
-  outline: 2px solid var(--blue);
+  outline: 2px solid var(--gold);
   outline-offset: 1px;
   background: var(--white);
 }
@@ -458,7 +459,7 @@ h3 { font-size: 1.25rem; }
   align-items: center;
 }
 .split-visual {
-  background: linear-gradient(155deg, var(--ink), var(--blue));
+  background: linear-gradient(155deg, var(--ink), var(--red-dark) 75%, var(--gold));
   border-radius: var(--radius);
   min-height: 420px;
   position: relative;
@@ -555,7 +556,7 @@ h3 { font-size: 1.25rem; }
 .testimonial-quote-mark {
   font-size: 2.6rem;
   line-height: 1;
-  color: var(--blue);
+  color: var(--gold-dark);
   font-weight: 900;
   margin-bottom: 8px;
   font-family: Georgia, serif;
@@ -655,7 +656,7 @@ h3 { font-size: 1.25rem; }
 
 /* Page hero (interior pages) */
 .page-hero {
-  background: linear-gradient(120deg, var(--ink), var(--blue));
+  background: linear-gradient(120deg, var(--ink), var(--red-dark) 85%, var(--gold));
   color: var(--white);
   padding: 64px 0;
   text-align: center;
@@ -737,7 +738,7 @@ h3 { font-size: 1.25rem; }
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background: var(--blue);
+  background: var(--gold);
 }
 
 /* Furniture catalog */
