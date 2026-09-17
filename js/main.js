@@ -16,8 +16,33 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       var success = form.parentElement.querySelector(".form-success");
-      form.style.display = "none";
-      if (success) success.classList.add("visible");
+      var submitBtn = form.querySelector('button[type="submit"]');
+      var originalText = submitBtn ? submitBtn.textContent : "";
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+      }
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Request failed");
+          form.style.display = "none";
+          if (success) success.classList.add("visible");
+        })
+        .catch(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+          }
+          alert(
+            "Sorry, something went wrong sending your message. Please call us at (502) 418-1205 or email cody-ois@outlook.com directly."
+          );
+        });
     });
   });
 });

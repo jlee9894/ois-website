@@ -101,7 +101,10 @@
     <div class="contact-form-panel">
       <h3>Send Us a Message</h3>
       <p class="quote-sub">Fill out the form and our team will follow up shortly.</p>
-      <form data-quote-form>
+      <form data-quote-form action="https://formsubmit.co/cody-ois@outlook.com" method="POST">
+        <input type="hidden" name="_subject" value="New Contact Form Message - OIS Website">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <div class="form-row">
           <label for="c-name">Full Name</label>
           <input type="text" id="c-name" name="name" required>
