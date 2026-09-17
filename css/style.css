@@ -283,7 +283,9 @@ h3 { font-size: 1.25rem; }
 /* Hero */
 .hero {
   position: relative;
-  background: linear-gradient(120deg, var(--ink) 0%, #3d1216 55%, var(--red-dark) 130%);
+  background:
+    linear-gradient(120deg, rgba(26, 26, 26, 0.94) 0%, rgba(61, 18, 22, 0.88) 45%, rgba(194, 36, 46, 0.65) 100%),
+    url("../images/ois-main-hero.jpg") center 30% / cover no-repeat;
   color: var(--white);
   overflow: hidden;
 }
