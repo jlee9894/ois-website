@@ -492,6 +492,10 @@ h3 { font-size: 1.25rem; }
   height: 100%;
   object-fit: contain;
 }
+.split-visual .badge-poster-sm {
+  width: 80%;
+  height: 80%;
+}
 .split h2 {
   margin-bottom: 18px;
 }
