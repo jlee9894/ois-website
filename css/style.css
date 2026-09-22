@@ -764,18 +764,36 @@ h3 { font-size: 1.25rem; }
   background: var(--gold);
 }
 
-/* Project gallery */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+/* Project gallery (slider) */
+.gallery-slider-wrap {
+  position: relative;
+}
+.gallery-slider {
+  display: flex;
   gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  padding-bottom: 12px;
+  margin: 0 -4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.gallery-slider::-webkit-scrollbar {
+  height: 8px;
+}
+.gallery-slider::-webkit-scrollbar-thumb {
+  background: var(--gray-300);
+  border-radius: 4px;
 }
 .gallery-item {
   display: block;
+  flex: 0 0 260px;
   aspect-ratio: 4 / 3;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow);
+  scroll-snap-align: start;
 }
 .gallery-item img {
   width: 100%;
@@ -785,6 +803,32 @@ h3 { font-size: 1.25rem; }
 }
 .gallery-item:hover img {
   transform: scale(1.06);
+}
+.slider-btn {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  cursor: pointer;
+  z-index: 2;
+}
+.slider-btn.prev {
+  left: -8px;
+}
+.slider-btn.next {
+  right: -8px;
+}
+.slider-btn:hover {
+  color: var(--red);
 }
 
 /* Furniture catalog */
@@ -977,7 +1021,6 @@ h3 { font-size: 1.25rem; }
   .features-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: 1fr; }
   .catalog-grid { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .service-detail { grid-template-columns: 1fr; }
@@ -1003,7 +1046,8 @@ h3 { font-size: 1.25rem; }
   .services-grid { grid-template-columns: 1fr; }
   .clients-grid { grid-template-columns: 1fr 1fr; }
   .features-grid { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery-item { flex-basis: 200px; }
+  .slider-btn { display: none; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .cta-banner { flex-direction: column; text-align: center; padding: 40px 28px; }
   .section { padding: 56px 0; }
