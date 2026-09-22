@@ -713,6 +713,18 @@ h3 { font-size: 1.25rem; }
   justify-content: center;
   color: var(--gray-500);
 }
+.service-detail-visual.has-photo {
+  border: none;
+  padding: 0;
+  overflow: hidden;
+  min-height: 280px;
+  box-shadow: var(--shadow);
+}
+.service-detail-visual.has-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .service-detail-icon {
   width: 64px;
   height: 64px;
@@ -750,6 +762,29 @@ h3 { font-size: 1.25rem; }
   height: 14px;
   border-radius: 50%;
   background: var(--gold);
+}
+
+/* Project gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.gallery-item {
+  display: block;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.gallery-item:hover img {
+  transform: scale(1.06);
 }
 
 /* Furniture catalog */
@@ -942,6 +977,7 @@ h3 { font-size: 1.25rem; }
   .features-grid { grid-template-columns: repeat(2, 1fr); }
   .testimonials-grid { grid-template-columns: 1fr; }
   .catalog-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
   .service-detail { grid-template-columns: 1fr; }
@@ -967,6 +1003,7 @@ h3 { font-size: 1.25rem; }
   .services-grid { grid-template-columns: 1fr; }
   .clients-grid { grid-template-columns: 1fr 1fr; }
   .features-grid { grid-template-columns: 1fr; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .cta-banner { flex-direction: column; text-align: center; padding: 40px 28px; }
   .section { padding: 56px 0; }
