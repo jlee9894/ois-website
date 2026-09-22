@@ -482,18 +482,10 @@ h3 { font-size: 1.25rem; }
   align-items: center;
   justify-content: center;
 }
-.split-visual .badge-ring {
-  width: 200px;
-  height: 200px;
-  border: 3px solid rgba(255,255,255,0.35);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: var(--white);
-  font-weight: 800;
-  padding: 20px;
+.split-visual .badge-icon {
+  width: 240px;
+  height: 240px;
+  max-width: 70%;
 }
 .split h2 {
   margin-bottom: 18px;
