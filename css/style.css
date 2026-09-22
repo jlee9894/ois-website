@@ -683,7 +683,7 @@ h3 { font-size: 1.25rem; }
 /* Service detail rows */
 .service-detail {
   display: grid;
-  grid-template-columns: 0.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: center;
   padding: 48px 0;
