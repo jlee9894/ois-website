@@ -38,7 +38,7 @@ html {
 }
 
 body {
-  font-family: "Work Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Source Sans 3", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.6;
@@ -66,7 +66,8 @@ ul {
 }
 
 h1, h2, h3, h4 {
-  font-weight: 800;
+  font-family: "Poppins", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
   line-height: 1.2;
   color: var(--ink);
 }
@@ -107,6 +108,7 @@ h3 { font-size: 1.25rem; }
 
 /* Buttons */
 .btn {
+  font-family: "Poppins", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -219,7 +221,8 @@ h3 { font-size: 1.25rem; }
   padding: 4px;
 }
 .brand-text .brand-name {
-  font-weight: 800;
+  font-family: "Poppins", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
   font-size: 1.15rem;
   color: var(--ink);
   line-height: 1.15;
@@ -254,7 +257,8 @@ h3 { font-size: 1.25rem; }
   gap: 14px;
 }
 .nav-phone {
-  font-weight: 800;
+  font-family: "Poppins", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
   color: var(--ink);
   font-size: 1rem;
 }
