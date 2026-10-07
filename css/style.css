@@ -210,6 +210,7 @@ h3 { font-size: 1.25rem; }
   justify-content: space-between;
   padding: 14px 24px;
   max-width: 1320px;
+  min-height: 84px;
 }
 .brand {
   display: flex;
